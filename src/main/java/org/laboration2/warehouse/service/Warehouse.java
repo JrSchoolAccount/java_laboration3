@@ -19,6 +19,10 @@ public class Warehouse {
     }
 
     public void newProduct(int id, String name, ProductType type, int rating, LocalDate created, LocalDate modified) {
+        if (getProductById(id).isPresent()) {
+            throw new IllegalArgumentException("Product with id: " + id + " already exists");
+        }
+
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Product name cannot be null or empty");
         }
@@ -30,20 +34,17 @@ public class Warehouse {
         }
     }
 
-    public List<Product> getProducts() {
+    public List<Product> getAllProducts() {
         checkIfProductsEmpty();
 
-        synchronized (products) {
-            return new ArrayList<>(products);
-        }
+        return new ArrayList<>(products);
     }
 
-    public Product getProductById(int id) {
+    public Optional<Product> getProductById(int id) {
 
-        return products.stream()
+        return  products.stream()
                 .filter(product -> product.id() == id)
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Product with id: " + id + ", does not exist"));
+                .findFirst();
     }
 
     public List<Product> getProductsByTypeSortedAtoZ(ProductType type) {
@@ -96,23 +97,22 @@ public class Warehouse {
         if (newRating < 0 || newRating > 10) {
             throw new IllegalArgumentException("Invalid rating value: " + newRating + ". Rating must be between 0 and 10");
         }
+        Optional<Product> oldProduct = getProductById(id);
 
-        try {
-            Product oldProduct = getProductById(id);
-
+        if (oldProduct.isPresent()) {
             Product updatedProduct = new Product(
-                    oldProduct.id(),
+                    oldProduct.get().id(),
                     newName,
                     newType,
                     newRating,
-                    oldProduct.created(),
+                    oldProduct.get().created(),
                     LocalDate.now()
             );
 
-            products.remove(oldProduct);
+            products.remove(oldProduct.get());
             products.add(updatedProduct);
 
-        } catch (Exception e) {
+        } else  {
             throw new IllegalArgumentException("Product creation failed");
         }
     }
@@ -166,7 +166,7 @@ public class Warehouse {
     public List<Product> getThisMonthsMaxRankedProductsNewestFirst() {
         checkIfProductsEmpty();
 
-        LocalDate now = LocalDate.of(2024, 9, 30);
+        LocalDate now = LocalDate.now();
 
         List<Product> thisMonthsMaxRatedProducts = products.stream()
                 .filter(product -> product.rating() == 10)
@@ -182,3 +182,4 @@ public class Warehouse {
         return thisMonthsMaxRatedProducts;
     }
 }
+

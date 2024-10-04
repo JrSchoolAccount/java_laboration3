@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f944039-3363-4e1a-827e-42e0e052d244" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/laboration2/ProductResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboration2/warehouse/service/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/warehouse/service/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/laboration2/WarehouseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/laboration2/WarehouseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,8 +185,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductResourceTest" />
         <item itemvalue="JUnit.WarehouseTest" />
+        <item itemvalue="JUnit.ProductResourceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +208,7 @@
       <updated>1727326052618</updated>
       <workItem from="1727326053846" duration="9889000" />
       <workItem from="1727851534184" duration="689000" />
-      <workItem from="1727853134217" duration="26046000" />
+      <workItem from="1727853134217" duration="27365000" />
     </task>
     <servers />
   </component>
