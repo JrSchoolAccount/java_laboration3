@@ -1,5 +1,6 @@
 package org.laboration2.warehouse.service;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import org.laboration2.warehouse.entities.Product;
 import org.laboration2.warehouse.entities.ProductType;
 
@@ -7,6 +8,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@ApplicationScoped
 public class Warehouse {
     private final List<Product> products = Collections.synchronizedList(new ArrayList<>());
 
