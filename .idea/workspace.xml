@@ -10,16 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f944039-3363-4e1a-827e-42e0e052d244" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/ProductResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/laboration2/ProductResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboration2/AppResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboration2/warehouse/service/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/warehouse/service/Warehouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +59,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor": "Run",
+    "JUnit.ProductResourceTest.executor": "Run",
     "JUnit.WarehouseTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -142,6 +147,21 @@
         </option>
       </method>
     </configuration>
+    <configuration name="ProductResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_laboration2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.laboration2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.laboration2" />
+      <option name="MAIN_CLASS_NAME" value="org.laboration2.ProductResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WarehouseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java_laboration2" />
       <extension name="coverage">
@@ -159,10 +179,12 @@
     </configuration>
     <list>
       <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final" />
+      <item itemvalue="JUnit.ProductResourceTest" />
       <item itemvalue="JUnit.WarehouseTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductResourceTest" />
         <item itemvalue="JUnit.WarehouseTest" />
       </list>
     </recent_temporary>
@@ -185,7 +207,7 @@
       <updated>1727326052618</updated>
       <workItem from="1727326053846" duration="9889000" />
       <workItem from="1727851534184" duration="689000" />
-      <workItem from="1727853134217" duration="23344000" />
+      <workItem from="1727853134217" duration="26046000" />
     </task>
     <servers />
   </component>
