@@ -8,6 +8,7 @@ import org.laboration2.warehouse.entities.Product;
 import org.laboration2.warehouse.service.Warehouse;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Path("/products")
 public class ProductResource {
@@ -31,6 +32,19 @@ public class ProductResource {
                     date
             );
             return Response.status(Response.Status.CREATED).build();
+        } catch (IllegalArgumentException e) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
+        }
+    }
+
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response allProducts() {
+        try {
+            List<Product> products = warehouse.getAllProducts();
+
+            return Response.status(Response.Status.OK).entity(products).build();
         } catch (IllegalArgumentException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         }
