@@ -5,6 +5,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.laboration2.warehouse.entities.Product;
+import org.laboration2.warehouse.entities.ProductType;
 import org.laboration2.warehouse.service.Warehouse;
 
 import java.time.LocalDate;
@@ -59,5 +60,28 @@ public class ProductResource {
                 .orElseGet(() -> Response.status(Response.Status.NOT_FOUND)
                         .entity("Product with id: " + id + " not found")
                         .build());
+    }
+
+    @GET
+    @Path("/category/{category}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response allProductsInCategory(@PathParam("category") String category) {
+        try {
+            ProductType productType = ProductType.valueOf(category.toUpperCase());
+
+            List<Product> products = warehouse.getProductsByTypeSortedAtoZ(productType);
+
+            return Response.ok(products).build();
+        } catch (IllegalArgumentException e) {
+
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("Invalid product category: " + category)
+                    .build();
+        } catch (Exception e) {
+
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity("An error occurred while fetching products")
+                    .build();
+        }
     }
 }
