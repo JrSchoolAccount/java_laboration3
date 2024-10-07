@@ -49,4 +49,15 @@ public class ProductResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         }
     }
+
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getProduct(@PathParam("id") int id) {
+        return warehouse.getProductById(id)
+                .map(product -> Response.status(Response.Status.OK).entity(product).build())
+                .orElseGet(() -> Response.status(Response.Status.NOT_FOUND)
+                        .entity("Product with id: " + id + " not found")
+                        .build());
+    }
 }
