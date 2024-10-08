@@ -1,4 +1,4 @@
-package org.laboration2.warehouse.entities;
+package org.laboration2.entities;
 
 import jakarta.validation.constraints.*;
 

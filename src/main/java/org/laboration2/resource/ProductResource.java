@@ -1,13 +1,13 @@
-package org.laboration2;
+package org.laboration2.resource;
 
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.laboration2.warehouse.entities.Product;
-import org.laboration2.warehouse.entities.ProductType;
-import org.laboration2.warehouse.service.Warehouse;
+import org.laboration2.entities.Product;
+import org.laboration2.entities.ProductType;
+import org.laboration2.service.Warehouse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

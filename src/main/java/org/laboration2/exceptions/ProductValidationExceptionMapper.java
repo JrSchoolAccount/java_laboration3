@@ -1,4 +1,4 @@
-package org.laboration2;
+package org.laboration2.exceptions;
 
 import jakarta.validation.ConstraintViolationException;
 import jakarta.ws.rs.core.Response;
