@@ -1,6 +1,7 @@
 package org.laboration2;
 
 import jakarta.inject.Inject;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -14,14 +15,19 @@ import java.util.List;
 @Path("/products")
 public class ProductResource {
 
-    @Inject
     private Warehouse warehouse;
+
+    public ProductResource() {}
+
+    @Inject
+    public ProductResource(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
 
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addProduct(Product product) {
-        try {
+    public Response addProduct(@Valid Product product) {
             LocalDate date = LocalDate.now();
 
             warehouse.newProduct(
@@ -33,13 +39,9 @@ public class ProductResource {
                     date
             );
             return Response.status(Response.Status.CREATED).build();
-        } catch (IllegalArgumentException e) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
-        }
     }
 
     @GET
-    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response allProducts() {
         try {
