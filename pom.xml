@@ -36,6 +36,24 @@
       <version>6.1.0</version>
       <scope>provided</scope>
     </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>2.0.16</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-simple</artifactId>
+          <version>2.0.16</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>jakarta.validation</groupId>
+          <artifactId>jakarta.validation-api</artifactId>
+          <version>3.1.0</version>
+          <scope>provided</scope>
+      </dependency>
 <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
@@ -61,16 +79,34 @@
           <scope>test</scope>
       </dependency>
       <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
-          <version>1.7.36</version>
-          <scope>provided</scope>
+          <groupId>org.jboss.resteasy</groupId>
+          <artifactId>resteasy-core</artifactId>
+          <version>6.2.8.Final</version>
+          <scope>test</scope>
       </dependency>
       <dependency>
-          <groupId>jakarta.validation</groupId>
-          <artifactId>jakarta.validation-api</artifactId>
-          <version>3.1.0</version>
-          <scope>provided</scope>
+          <groupId>org.jboss.resteasy</groupId>
+          <artifactId>resteasy-jackson2-provider</artifactId>
+          <version>6.2.9.Final</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.hibernate.validator</groupId>
+          <artifactId>hibernate-validator</artifactId>
+          <version>8.0.1.Final</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.glassfish.expressly</groupId>
+          <artifactId>expressly</artifactId>
+          <version>5.0.0</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.skyscreamer</groupId>
+          <artifactId>jsonassert</artifactId>
+          <version>1.5.3</version>
+          <scope>test</scope>
       </dependency>
   </dependencies>
   <build>

@@ -12,8 +12,6 @@
     <list default="true" id="3f944039-3363-4e1a-827e-42e0e052d244" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProductValidationExceptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/ProductValidationExceptionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboration2/ProductResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/ProductResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +60,7 @@
   "keyToString": {
     "JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor": "Run",
     "JUnit.ProductResourceTest.executor": "Run",
+    "JUnit.ProductResourceTest.whenPostingValidProductThenShouldReturn201Created.executor": "Debug",
     "JUnit.WarehouseTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -83,7 +82,7 @@
       <recent name="org.laboration2" />
     </key>
   </component>
-  <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
+  <component name="RunManager" selected="JUnit.ProductResourceTest">
     <configuration name="JBoss/WildFly 33.0.2.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 33.0.2.Final" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="java_laboration2:war exploded">
@@ -191,8 +190,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WarehouseTest" />
         <item itemvalue="JUnit.ProductResourceTest" />
+        <item itemvalue="JUnit.WarehouseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -226,5 +225,21 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/laboration2/ProductResourceTest.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/laboration2/ProductResourceTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
