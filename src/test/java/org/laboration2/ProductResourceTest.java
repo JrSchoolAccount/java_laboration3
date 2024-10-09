@@ -11,15 +11,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.laboration2.resource.ProductResource;
-import org.laboration2.entities.Product;
-import org.laboration2.entities.ProductType;
 import org.laboration2.service.Warehouse;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
-import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -40,17 +37,20 @@ public class ProductResourceTest {
     }
 
     @Test
-    void whenPostingValidProductThenShouldReturn201Created() throws URISyntaxException, JsonProcessingException, UnsupportedEncodingException {
-        // Arrange: Create a valid product JSON payload
-        Product validProduct = new Product(1, "Magic Sword", ProductType.WEAPON, 9, LocalDate.now(), LocalDate.now());
-        String json = new ObjectMapper().writeValueAsString(validProduct);
-
-
-        Mockito.doNothing().when(warehouse).newProduct(any(), any(), any(), any(), any(), any());
+    void whenPostingValidProductThenShouldReturn201Created() throws URISyntaxException, UnsupportedEncodingException {
+        String json = """
+    {
+        "id": 1,
+        "name": "Necronomicon",
+        "type": "ARTIFACT",
+        "rating": 7
+    }
+    """;
 
         MockHttpRequest request = MockHttpRequest.post("/products")
                 .content(json.getBytes())
                 .contentType(MediaType.APPLICATION_JSON);
+
         MockHttpResponse response = new MockHttpResponse();
 
         dispatcher.invoke(request, response);
