@@ -374,4 +374,19 @@ class WarehouseTest {
         assertThat(maxRatedProductsThisMonth.getFirst().rating()).isEqualTo(10);
         assertThat(maxRatedProductsThisMonth.getFirst().created()).isEqualTo(thisMonth);
     }
+
+    @Test
+    void shouldReturnAllProductsWithPaginationPage1Size2() {
+        LocalDate now = LocalDate.now();
+
+        warehouse.newProduct(1, "Morning star", ProductType.WEAPON, 10, now, now);
+        warehouse.newProduct(2, "Broad sword", ProductType.WEAPON, 10, now, now);
+        warehouse.newProduct(3, "Chain mail", ProductType.ARMOR, 9, now, now);
+
+        List<Product> allProductsPaginated = warehouse.paginateAllProducts(1, 2);
+
+        assertThat(allProductsPaginated.size()).isEqualTo(2);
+        assertThat(allProductsPaginated.get(0).name()).isEqualTo("Morning star");
+        assertThat(allProductsPaginated.get(1).name()).isEqualTo("Broad sword");
+    }
 }

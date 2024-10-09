@@ -40,6 +40,16 @@ public class Warehouse {
         return new ArrayList<>(products);
     }
 
+    public List<Product> paginateAllProducts(int pageNumber, int pageSize) {
+        List<Product> allProducts = getAllProducts();
+        int offset = (pageNumber - 1) * pageSize;
+
+        return allProducts.stream()
+                .skip(offset)
+                .limit(pageSize)
+                .collect(Collectors.toList());
+    }
+
     public Optional<Product> getProductById(int id) {
 
         return  products.stream()
