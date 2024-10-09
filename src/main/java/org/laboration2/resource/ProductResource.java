@@ -54,10 +54,17 @@ public class ProductResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response allProducts() {
+    public Response allProducts(@QueryParam("page") int page, @QueryParam("size") int size) {
         logger.info("Trying to list all products");
         try {
-            List<Product> products = warehouse.getAllProducts();
+            List<Product> products;
+
+            if (page !=0 && size !=0) {
+                logger.info("Listing all products on page {} and with page size {}", page, size);
+                products = warehouse.paginateAllProducts(page, size);
+            } else {
+                products = warehouse.getAllProducts();
+            }
 
             logger.info("All Products successfully listed");
             return Response.status(Response.Status.OK).entity(products).build();

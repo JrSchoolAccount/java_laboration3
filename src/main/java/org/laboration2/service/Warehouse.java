@@ -44,6 +44,10 @@ public class Warehouse {
         List<Product> allProducts = getAllProducts();
         int offset = (pageNumber - 1) * pageSize;
 
+        if (offset >= allProducts.size()) {
+            throw new IllegalArgumentException("Page number out of range.");
+        }
+
         return allProducts.stream()
                 .skip(offset)
                 .limit(pageSize)
