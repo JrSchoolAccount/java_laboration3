@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f944039-3363-4e1a-827e-42e0e052d244" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/exceptions/JsonbExceptionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laboration2/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laboration2/entities/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,10 @@
     &quot;accountId&quot;: &quot;af363904-0017-4827-9d58-dc3612e389b2&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -57,6 +64,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;HTTP Request.scratch | AllproductsInCategory.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | GET request to example server.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | addProduct.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | allProducts.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | allProductsWithPagination.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | getProduct.executor&quot;: &quot;Run&quot;,
     &quot;JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ProductResourceTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ProductResourceTest.whenPostingValidProductThenShouldReturn201Created.executor&quot;: &quot;Debug&quot;,
@@ -74,6 +87,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.28045976&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTTP Request&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -82,6 +100,21 @@
     </key>
   </component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
+    <configuration name="scratch | AllproductsInCategory" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="2" requestIdentifier="AllproductsInCategory" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch | addProduct" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="5" requestIdentifier="addProduct" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch | allProducts" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="4" requestIdentifier="allProducts" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch | allProductsWithPagination" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" requestIdentifier="allProductsWithPagination" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch | getProduct" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="3" requestIdentifier="getProduct" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="JBoss/WildFly 33.0.2.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 33.0.2.Final" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="java_laboration2:war exploded">
@@ -152,45 +185,21 @@
         </option>
       </method>
     </configuration>
-    <configuration name="ProductResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java_laboration2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.laboration2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.laboration2" />
-      <option name="MAIN_CLASS_NAME" value="org.laboration2.ProductResourceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WarehouseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java_laboration2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.laboration2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.laboration2" />
-      <option name="MAIN_CLASS_NAME" value="org.laboration2.WarehouseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="HTTP Request.scratch | AllproductsInCategory" />
+      <item itemvalue="HTTP Request.scratch | addProduct" />
+      <item itemvalue="HTTP Request.scratch | allProducts" />
+      <item itemvalue="HTTP Request.scratch | allProductsWithPagination" />
+      <item itemvalue="HTTP Request.scratch | getProduct" />
       <item itemvalue="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final" />
-      <item itemvalue="JUnit.ProductResourceTest" />
-      <item itemvalue="JUnit.WarehouseTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WarehouseTest" />
-        <item itemvalue="JUnit.ProductResourceTest" />
+        <item itemvalue="HTTP Request.scratch | allProductsWithPagination" />
+        <item itemvalue="HTTP Request.scratch | AllproductsInCategory" />
+        <item itemvalue="HTTP Request.scratch | getProduct" />
+        <item itemvalue="HTTP Request.scratch | allProducts" />
+        <item itemvalue="HTTP Request.scratch | addProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -213,6 +222,7 @@
       <workItem from="1727326053846" duration="9889000" />
       <workItem from="1727851534184" duration="689000" />
       <workItem from="1727853134217" duration="49087000" />
+      <workItem from="1728762215482" duration="344000" />
     </task>
     <servers />
   </component>

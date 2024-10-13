@@ -15,8 +15,9 @@ public record Product(
         @NotNull
         ProductType type,
 
-        @Min(value = 1, message = "Minimum rating can not be less than 1")
-        @Max(value = 10, message = "Max rating can not be more than 10")
+        @NotNull(message = "Empty rating not allowed")
+        @Min(value = 1, message = "Rating can not be less than 1")
+        @Max(value = 10, message = "Rating can not be more than 10")
         int rating,
 
         LocalDate created,
