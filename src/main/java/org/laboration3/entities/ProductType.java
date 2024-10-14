@@ -1,4 +1,4 @@
-package org.laboration2.entities;
+package org.laboration3.entities;
 
 public enum ProductType {
     POTION,

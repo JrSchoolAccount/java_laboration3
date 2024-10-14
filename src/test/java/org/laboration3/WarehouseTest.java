@@ -1,8 +1,8 @@
-package org.laboration2;
+package org.laboration3;
 
-import org.laboration2.entities.Product;
-import org.laboration2.entities.ProductType;
-import org.laboration2.service.Warehouse;
+import org.laboration3.entities.Product;
+import org.laboration3.entities.ProductType;
+import org.laboration3.service.Warehouse;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

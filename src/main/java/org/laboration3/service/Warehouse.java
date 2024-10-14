@@ -1,8 +1,8 @@
-package org.laboration2.service;
+package org.laboration3.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import org.laboration2.entities.Product;
-import org.laboration2.entities.ProductType;
+import org.laboration3.entities.Product;
+import org.laboration3.entities.ProductType;
 
 import java.time.LocalDate;
 import java.util.*;

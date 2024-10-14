@@ -1,20 +1,19 @@
-package org.laboration2;
+package org.laboration3;
 
 import jakarta.ws.rs.core.MediaType;
 import org.jboss.resteasy.mock.MockDispatcherFactory;
 import org.jboss.resteasy.mock.MockHttpRequest;
 import org.jboss.resteasy.mock.MockHttpResponse;
 import org.jboss.resteasy.spi.Dispatcher;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.laboration2.entities.Product;
-import org.laboration2.entities.ProductType;
-import org.laboration2.resource.ProductResource;
-import org.laboration2.service.Warehouse;
+import org.laboration3.entities.Product;
+import org.laboration3.entities.ProductType;
+import org.laboration3.resource.ProductResource;
+import org.laboration3.service.Warehouse;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -27,7 +26,6 @@ import java.time.LocalDate;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class ProductResourceTest {
