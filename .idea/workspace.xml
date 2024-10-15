@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f944039-3363-4e1a-827e-42e0e052d244" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/laboration2/ProductResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/laboration2/ProductResourceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -34,16 +35,16 @@
     &quot;assignee&quot;: &quot;JrSchoolAccount&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JrSchoolAccount/java_laboration2.git&quot;,
-    &quot;accountId&quot;: &quot;af363904-0017-4827-9d58-dc3612e389b2&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:JrSchoolAccount/java_laboration2.git",
+    "accountId": "af363904-0017-4827-9d58-dc3612e389b2"
   }
-}</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
 }]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -72,18 +73,21 @@
     "JUnit.ProductResourceTest.executor": "Run",
     "JUnit.ProductResourceTest.whenPostingValidProductThenShouldReturn201Created.executor": "Debug",
     "JUnit.WarehouseTest.executor": "Run",
+    "Maven.java_laboration3 [build].executor": "Run",
+    "Maven.java_laboration3 [clean,package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/maclaptop/Desktop/Java/Projects/java_laboration3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.28045976",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -97,7 +101,13 @@
       <recent name="org.laboration2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductResourceTest">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn build" />
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JBoss/WildFly Server.JBoss/WildFly 33.0.2.Final">
     <configuration name="scratch | AllproductsInCategory" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="2" requestIdentifier="AllproductsInCategory" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -184,12 +194,12 @@
       <module name="java_laboration2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.laboration2.*" />
+          <option name="PATTERN" value="org.laboration3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.laboration2" />
-      <option name="MAIN_CLASS_NAME" value="org.laboration2.ProductResourceTest" />
+      <option name="MAIN_CLASS_NAME" value="org.laboration3.ProductResourceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -233,6 +243,7 @@
       <workItem from="1727851534184" duration="689000" />
       <workItem from="1727853134217" duration="49087000" />
       <workItem from="1728762215482" duration="13573000" />
+      <workItem from="1728930574094" duration="3000000" />
     </task>
     <servers />
   </component>
@@ -244,5 +255,9 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
